@@ -1,0 +1,286 @@
+typeof = ve o tipo da variavel 
+
+==========strings==========
+
+nome.concat(sobrenome) junta as duas strings
+nome.length fala a quantidade de caracteres 
+
+let exemplo = new String("blablabla") deixa como um objeto
+
+"\n" quebra a linha 
+
+exemplo = '${nome} ${sobrenome}' escreve direto
+
+frase.split(" ") ele separa tudo na frase
+frase.includes("palavra") verifica se a frase tem aquela palavra
+frase.startsWith("o") verifica se a frase comeca com a letra
+frase.endsWith("a") verifica se a frase acabou com a letra
+
+let string = frase.replace(",", "!") troca a letra por outra
+
+valor.toString() converter algo para string
+
+==========numbers==========
+
+num % 2 achar numero par 
+
+Math
+Math.PI valor de pi
+Math.floor("valor") arredonda pra baixo
+Math.ceil("valor") arredonda pra cima
+
+==========booleans==========
+
+retorna true ou false
+
+algo === algo
+
+!algo retorna a resposta contraria
+
+==========arrays==========
+
+sempre começa no 0
+
+let array = []
+
+array.push(3) add na array
+array.pop(3) remove o ultimo valor da array
+array.shift(3) remove o primeiro valor da array
+array.unshift(3) add no comeco da array
+array.includes(3) verifica se existe o valor na array
+array.reverse() inverte a array
+
+array.join("") juntar tudo do array
+
+
+tecnica de spread: manda os argumentos da array pra function
+
+function sum(x, y, z){
+ return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+consolo.log(sum(...numbers));
+
+==========objetos==========
+
+let obj = {}
+
+obj.name = "rapha" add name
+obj.age = 20 add numero
+
+Object.values(obj) ve o valor
+
+let person = {
+ name: "julia",
+ age: 20,
+ adress: "Rua 2"
+}
+person.name me retorna o nome
+
+person["numerOfSivlings"] = 3 cria de uma outra forma
+
+
+==========functions==========
+
+
+funcao anonima
+
+const soma = function(a, b) {
+ return a + b;
+}
+
+
+funcao auto executada
+
+(
+  function(a, b){
+    return a+b;
+  }
+)(1, 2);
+
+
+const soma3 = (
+  function() {
+    return a+b;
+  }
+)(1, 2);
+
+console.log(soma3);
+
+
+o "arguments" manda todos or argumentos feitos
+o "max" se refere ao maior numero
+"-Infiniy" aceita argumentos negativos e positivos
+
+function findMax(){
+ let max = -Infiniy;
+ for (ket i = 0; i <arguments.length; i++){
+      if (arguments[i] > max){
+	 max = arguments[i];
+      }  		
+ }
+  return max;
+}
+
+
+tecnica de spread: manda os argumentos da array pra function
+
+function sum(x, y, z){
+ return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+consolo.log(sum(...numbers));
+
+
+
+==========arrow functions==========
+
+const helloWorld = () => {
+     return "Hello Word";
+}
+
+
+const helloWorld = () => "Hello World";
+
+
+const soma = (a, b) => a + b;
+soma(2, 4);
+
+
+coisas ruins nela:
+o this nao funfa direito
+nao da pra usar o arguments
+nao da pra usar o construtur
+
+
+==========this==========
+
+.this
+
+.call()
+.apply()
+.bind()
+
+
+==========Map==========
+
+
+const myMap = new Map()
+
+myMap.set('apple', 'fruit'); apple é a chave, e o valor é fruit
+myMap.get("apple"); ve o valor de apple
+myMap.delete("apple"); deleta o valor
+
+
+==========Set==========
+
+const mySet = new Set();
+
+mySet.add(1); add no set
+mySet.has(1); ve se existe o valor 
+mySet.delete(1); pra deletar o valor
+
+
+diferenca de uma array:
+possui valores unicos
+usa a propriedade size em vez do length
+nao usa metodos map, filter, reduce, etec.
+
+==========Throw, try/catch e finally==========
+
+tipo um return mas ele ja devolve como erro 
+
+if (!string) throw "String inválida"
+
+
+
+==========Error==========
+
+new Error(message, fileName, lineNumber)
+
+const meuErro = new Error('Mensagem Invalida');
+meuErro.name = 'InvalidMessage';
+throw meuErro;
+
+
+==========fetch==========
+
+
+
+
+==========Map==========
+
+cria um novo array
+nao modifica o array original
+realiza as operacoes em ordem
+
+array.map(callback, thisArg)
+callback(item, index, array)
+
+==========Filter==========
+
+array.filter(callback, thisArg)
+
+const frutas = ['maca fuji', 'maca verde', 'laranja', 'abacaxi'];
+frutas.filter((fruta) => fruta.include('maca')
+
+==========reduce==========
+
+executa uma funcao em todos os elementos do array, retornando um unico valor
+
+array.reduce(callbackFn, initialValue)
+callback: funcao a ser executada a partir do acumulador
+initialValue: valor sobre o qual o retorno final ira atuar
+
+const callbackFn = function(accumulator, currentValue, index, array){
+}
+
+accumulator/prevValue: acumulador de todas as chamadas de callbackFn
+
+currentValue: elemento atual sendo acessado pela funcao 
+
+
+
+==========DOM==========
+
+
+document.getElementById('')
+document.getElementByClassName('')
+document.getElementByTagName('')
+document.querySelector('')
+document.querySelectorAll('')
+
+
+document.createElement(element) cria um novo elemento HTML
+document.removeChild(element) remove um elemento
+document.apprendChild(element) add um elemento
+document.replaceChild(new, old) substitui um elemento
+
+
+elemento.classList.add("estilo") add uma classe no elemento
+elemento.classList.remove("estilo") remove uma classe no elemento
+elemento.classList.toggle("estilo") adiciona a classe no elemento, caso ela ja existir ele remove
+
+
+document.getElementsByTagname("p").style.color = "blue"; pinta todos os paragrafos
+
+
+==========tipo e eventos==========
+
+
+tipos de evento:
+mouseouver  quando coloca o mouse no elemento
+mouseout quando tira o mouse elemento
+click evento de click
+dbclick evento de clicks duplos
+change quando o campo mudar ele muda junto 
+load evento quando acaba de carregar a pagina
+
+
+botao.addEventListerner("click", outraFuncao) add evento de click e chama a funcao (da pra usar com o onclick no html)
+
+
+
+
