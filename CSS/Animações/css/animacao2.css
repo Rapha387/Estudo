@@ -1,0 +1,31 @@
+body{
+    background: linear-gradient(-45deg,#ff2b2b, #ff0026,#6eff2b, #62ff54) no-repeat;
+    background-size: 300% 300%;
+    margin:0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: degrade 10s ease infinite;
+}
+
+h1{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+@keyframes degrade{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}

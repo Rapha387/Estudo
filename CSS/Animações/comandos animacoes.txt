@@ -1,0 +1,56 @@
+transform: translate/translateX/ translateY/(100, 100) "desloca"
+
+transform: scale/scaleX/scaleY/(2) "aumenta"
+
+transform: rotate(40deg) ou (0.5 turn) "rotaciona"
+
+transform: skew(-20deg) "inclina"
+
+
+
+transition-property: background-color; "escolhe oq vai mudar"
+
+transition-duration: 2s "duracao da transicao"
+
+transition-delay: 1s "quanto tempo demora pra comecar"
+
+transition-tining-function: ease-in/ease-out/ease-in-out "suavização"
+
+transition-tining-function: cubic-bezier (.20, .20, .20, .20)
+
+
+animation-name: name "nome da animacao"
+
+animation-duration: 2s "tempo da animacao"
+
+animation-timing-function: ease-in/ease-out/ease-in-out/"suavizacao animacao"
+
+animation-timing-function: steps(3, jump-end/jump-start);
+
+animation-timing-function: linear
+
+animation-delay: 2s "quantidade de tempo q comeca a animacao"
+
+animation-interation-count: 1 ou infinite "quantidade de vezes q repete a animacao"
+
+animation-direction: reverse/alternate/alternate-reverse "direcao"
+
+animation-fill-mode: forwards/backwards/both "onde comeca"
+
+animation-play-state: running/pause "executar ou nao"
+
+@keyframes name{
+  
+  % ou from{
+  
+  
+  }
+
+  % ou to{
+  
+  transform: translateX(calc(100vw - tamanho da imagem)); "ir ate o final da tela"
+  }
+	
+}
+
+https://easings.net
